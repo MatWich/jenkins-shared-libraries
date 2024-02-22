@@ -1,4 +1,4 @@
-def runJob(jobName, params) {
+def call(String jobName, Map params) {
     try {
         def job = Jenkins.instance.getItem(jobName)
         if (job) {
@@ -11,11 +11,4 @@ def runJob(jobName, params) {
     } catch (Exception ex) {
         error "An error occured #ex"
     }
-}
-
-def call(String jobName, Map params) {
-    return [
-        jobName: jobName,
-        params: params
-    ]
 }
