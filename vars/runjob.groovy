@@ -1,4 +1,4 @@
-def call(String jobName, Map params) {
+def call(String jobName, def params) {
     try {
         def job = Jenkins.instance.getItem(jobName)
         if (job) {
